@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratégie de Réussite Académique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100" style="background-color: #f0f4f8;">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center mb-12">
+            <!-- Ajout du logo ABN ACADEMY -->
+            <img src="uploaded:Fichier 9@2x.png-22e1dd37-ac5a-42b3-ae44-61d77eb71062" alt="Logo ABN Academy"
+                class="mx-auto mb-6 w-32 md:w-40 h-auto" onerror="this.onerror=null; this.src='logo.png';">
+            <!-- Nouveau titre puissant et suggestif -->
+            <h1 class="4xl md:text-5xl font-extrabold text-slate-800" style="color: #004e92;">BAC 🎯 : Le Rythme
+                Quotidien</h1>
+            <!-- Nouvelle description et mention de l'auteur -->
+            <p class="mt-4 text-lg text-slate-600 font-semibold" style="color: #004e92;">Proposé par Pr. Anis Ben Nacib
+            </p>
+            <p class="mt-1 text-base text-slate-600" style="color: #004e92;">Une organisation hebdomadaire (hors
+                périodes de vacances scolaires) pour viser l'excellence avec régularité et sérénité.</p>
+            <!-- Remarque sur les vacances -->
+            <p class="mt-2 text-sm text-red-600 bg-red-100 p-2 inline-block rounded-md font-medium">
+                *Note : Le programme des vacances sera fourni ultérieurement.
+            </p>
+        </header>
+
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-4xl mb-3" style="color: #428bca;">🥇</div>
+                    <h3 class="text-lg font-bold text-slate-800" style="color: #004e92;">Prioriser le Difficile</h3>
+                    <p class="text-slate-600 text-sm">Commence par la tâche la plus complexe. Ton énergie est maximale
+                        en début de session.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-4xl mb-3" style="color: #428bca;">⏸️</div>
+                    <h3 class="text-lg font-bold text-slate-800" style="color: #004e92;">Faire des Pauses</h3>
+                    <p class="text-slate-600 text-sm">Des pauses régulières permettent à ton cerveau d'assimiler et de
+                        rester concentré plus longtemps.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="text-4xl mb-3" style="color: #428bca;">✔️</div>
+                    <h3 class="text-lg font-bold text-slate-800" style="color: #004e92;">Toujours Vérifier</h3>
+                    <p class="text-slate-600 text-sm">Relis tes notes ou fais un exercice rapide pour valider ce que tu
+                        viens d'apprendre.</p>
+                </div>
+            </div>
+        </section>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- 1. LA JOURNÉE DE COURS TYPE (Lundi → Vendredi) - Full Width -->
+            <section class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-center mb-6 text-slate-800" style="color: #004e92;">📅 La Journée de
+                    Cours Type (Lundi → Vendredi)</h2>
+                <div class="relative">
+                    <div class="border-l-4 border-dotted ml-6 md:ml-0 md:border-l-0 md:border-t-4 md:w-full"
+                        style="border-color: #a6d9f7;">
+                        <div class="flex md:flex-col items-start md:items-center -ml-8 md:ml-0">
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #428bca;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">18h00</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-slate-50">
+                                    <h4 class="font-bold">Transition</h4>
+                                    <p class="text-xs text-slate-600">Trajet, Goûter & Repos</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-16 border-t-2 border-dotted" style="border-color: #a6d9f7;">
+                            </div>
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #428bca;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">18h30</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-slate-50">
+                                    <h4 class="font-bold">Organisation</h4>
+                                    <p class="text-xs text-slate-600">Relecture rapide & Préparation</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-16 border-t-2 border-dotted" style="border-color: #a6d9f7;">
+                            </div>
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #428bca;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">19h15</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-slate-50">
+                                    <h4 class="font-bold">Repas</h4>
+                                    <p class="text-xs text-slate-600">Pause dîner sans écrans</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-16 border-t-2 border-dotted" style="border-color: #a6d9f7;">
+                            </div>
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #004e92;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">20h00</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-blue-100"
+                                    style="background-color: #e0f0ff;">
+                                    <h4 class="font-bold">Bloc 1 : Principal</h4>
+                                    <p class="text-xs text-slate-600">**2h00** de concentration max</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-16 border-t-2 border-dotted" style="border-color: #a6d9f7;">
+                            </div>
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #428bca;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">22h00</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-slate-50">
+                                    <h4 class="font-bold">Pause</h4>
+                                    <p class="text-xs text-slate-600">10 min de pause dynamique</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-16 border-t-2 border-dotted" style="border-color: #a6d9f7;">
+                            </div>
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #004e92;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">22h10</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-blue-100"
+                                    style="background-color: #e0f0ff;">
+                                    <h4 class="font-bold">Bloc 2 : Secondaire</h4>
+                                    <p class="text-xs text-slate-600">**40 min** de mémorisation</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-16 border-t-2 border-dotted" style="border-color: #a6d9f7;">
+                            </div>
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #428bca;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">22h50</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-slate-50">
+                                    <h4 class="font-bold">Dernière Relecture</h4>
+                                    <p class="text-xs text-slate-600">10 min d'ancrage mémoriel</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-16 border-t-2 border-dotted" style="border-color: #a6d9f7;">
+                            </div>
+                            <div class="w-full md:w-auto p-4 flex flex-col items-center">
+                                <div class="bg-white border-4 rounded-full w-5 h-5 mb-2" style="border-color: #428bca;">
+                                </div>
+                                <p class="font-bold text-sm" style="color: #004e92;">23h00</p>
+                                <div class="text-center p-2 rounded-lg mt-2 bg-slate-50">
+                                    <h4 class="font-bold">Coucher</h4>
+                                    <p class="text-xs text-slate-600">8h de sommeil minimum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. PROGRAMME DÉTAILLÉ DU WEEKEND - Full Width -->
+            <section class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-center mb-4 text-slate-800" style="color: #004e92;">🎯 Programme
+                    Détaillé du Weekend</h2>
+                <p class="text-center text-sm text-slate-600 mb-6">Le weekend est le moment idéal pour consolider tes
+                    acquis et maîtriser les **techniques de mémorisation**.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- SAMEDI -->
+                    <div class="p-4 rounded-xl border-2 shadow-inner"
+                        style="border-color: #428bca; background-color: #e0f0ff;">
+                        <h3 class="text-xl font-extrabold mb-2" style="color: #004e92;">📅 Samedi : Consolidation</h3>
+                        <ul class="space-y-1 text-slate-700 text-sm list-none pl-0">
+                            <li><span class="font-bold text-slate-800">Après-midi :</span> Révisions intensives (4 à 5h)
+                                ou cours particuliers. Applique ici des méthodes comme le **Mind-mapping** ou les
+                                fiches.</li>
+                            <li><span class="font-bold text-slate-800">Soir :</span> **Repos total !** Relâchement
+                                indispensable pour l'assimilation.</li>
+                        </ul>
+                    </div>
+
+                    <!-- DIMANCHE -->
+                    <div class="p-4 rounded-xl border-2 shadow-inner"
+                        style="border-color: #428bca; background-color: #e0f0ff;">
+                        <h3 class="text-xl font-extrabold mb-2" style="color: #004e92;">📅 Dimanche : Bilan &
+                            Préparation</h3>
+                        <ul class="space-y-1 text-slate-700 text-sm list-none pl-0">
+                            <li><span class="font-bold text-slate-800">Matin :</span> Révisions des **matières
+                                principales** de la semaine passée.</li>
+                            <li><span class="font-bold text-slate-800">Après-midi :</span> Révisions des **matières
+                                secondaires** ou rattrapage ciblé.</li>
+                            <li><span class="font-bold text-slate-800">Soir :</span> **Repos total !** Fais le plein
+                                d'énergie avant le début de semaine.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. RÉPARTITION DU TRAVAIL QUOTIDIEN - Half-Width -->
+            <div class="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-center mb-2 text-slate-800" style="color: #004e92;">Répartition
+                        du Travail Quotidien</h2>
+                    <p class="text-center text-sm text-slate-600 mb-4">Visualisation des **2h40** de travail personnel
+                        chaque soir de la semaine.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="dailyWorkChart"></canvas>
+                </div>
+            </div>
+
+            <!-- 4. CONSEIL CLÉ - OPTIMISÉ -->
+            <section class="bg-white rounded-lg shadow-md p-4 flex flex-col justify-center"
+                style="background-color: #004e92;">
+                <h2 class="text-2xl font-bold text-white text-center mb-3">Le Conseil Clé</h2>
+                <div class="flex flex-col md:flex-row items-center justify-center my-0">
+                    <!-- Réduction de text-8xl à text-7xl et ajustement des marges -->
+                    <span class="text-7xl font-black text-white mr-0 md:mr-4 mb-2 md:mb-0 flex-shrink-0"
+                        style="color: #a6d9f7;">5</span>
+                    <p class="text-white text-center md:text-left text-base">
+                        Si tu as du mal à commencer, lance-toi pour seulement **5 minutes**. C'est le plus dur. Une fois
+                        démarré, l'élan te portera et tu pourras continuer bien plus longtemps !
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12">
+            <!-- La note de rappel est placée à la fin. -->
+            <p class="text-base font-medium text-slate-700">Rappel : Ce planning est un modèle. Adapte-le à tes besoins
+                et avance à ton rythme. L'important, c’est la régularité ! 💪</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Fonction utilitaire pour éviter la coupure des légendes Chart.js
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        // Configuration du graphique quotidien (Daily Work Chart)
+        const dailyWorkCtx = document.getElementById('dailyWorkChart').getContext('2d');
+        new Chart(dailyWorkCtx, {
+            type: 'doughnut',
+            data: {
+                // Labels mis à jour: plus de "Transition et Repos"
+                labels: ['Matière Principale (2h00)', 'Matière Secondaire (40 min)'],
+                datasets: [{
+                    label: 'Temps de travail',
+                    // Data mis à jour: uniquement les deux blocs de travail
+                    data: [120, 40],
+                    backgroundColor: [
+                        '#428bca',
+                        '#a6d9f7'
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#004e92',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback,
+                            label: function (context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed + ' minutes';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
